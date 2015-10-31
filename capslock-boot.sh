@@ -1,7 +1,5 @@
 #!/bin/bash
 
-DISB_RELEASE=$(lsb_release -r | awk '{print $2}')
-
 notify() {
   USER=$(who | sed -n '/ (:0[\.0]*)$\| :0 /{s/ .*//p;q}')
   USERCNT=$(who | wc -l)
