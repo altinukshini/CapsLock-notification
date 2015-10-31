@@ -1,7 +1,6 @@
 #!/bin/bash
 
 CAPS_STATE=$(xset q | grep "Caps Lock:" | awk '{print $4}' | grep -c on)
-DISB_RELEASE=$(lsb_release -r | awk '{print $2}')
 
 notify() {
   USER=$(who | sed -n '/ (:0[\.0]*)$\| :0 /{s/ .*//p;q}')
