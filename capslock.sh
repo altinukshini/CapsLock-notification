@@ -18,9 +18,7 @@ notify() {
 
 if  [ "$CAPS_STATE" -eq 0 ]; then
     notify "Caps Lock OFF"
-    NOTIFICATION_STATE=1
 elif [ "$CAPS_STATE" -eq 1 ]; then
     notify "Caps Lock ON"
-    NOTIFICATION_STATE=0
     paplay /usr/share/sounds/gnome/default/alerts/glass.ogg
 fi
